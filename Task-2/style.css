@@ -1,0 +1,594 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #4DCCBD;
+}
+.movie-details p:first-child {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5em; /* Adjust size if needed */
+}
+.movie-row .movie-details p:first-child {
+    font-size: 1.8em !important;
+    font-family: 'Teko', sans-serif; /* Ensure Teko font is applied */
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    background-color: #4DCCBD;
+    color: #070410;
+    border-bottom: 1px solid #070410;
+    font-family: 'Teko', sans-serif; 
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 70px;
+ }
+
+nav a {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif; 
+    color: #070410;
+    font-size: 1em;
+}
+
+.search-btn {
+    font-family: 'Teko', sans-serif;
+    padding: 8px 16px;
+    border: 1px solid #231651;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #070410;
+    cursor: pointer;
+    height: 60px;
+    width: 150px;
+    font-size: 1.5em;
+    position: relative;
+    left: 40px;
+}
+
+/* Movie Box Styles */
+.movie-box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000;
+    margin: 16px auto;
+    width: 90%;
+}
+
+.movie-box.full-width {
+    width: 100%;
+    max-width: 900px;
+}
+
+.movie-box.half-width {
+    width: 48%;
+    margin: 1%;
+}
+
+.movie-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Movie Details */
+.movie-details {
+    padding: 16px;
+    background-color: #FFF;
+}
+
+.movie-details p {
+    font-family: 'Lato', sans-serif;
+    margin: 0 0 8px;
+    font-size: 1em;
+}
+
+/* Button Styles */
+.watch-now-btn {
+    font-family: 'Teko', sans-serif;
+    padding: 8px;
+    border: 2px solid #000000;
+    background-color: #070410;
+    color: #FFFFFF;
+    width: 100%;
+    cursor: pointer;
+}
+
+.watch-now-btn:hover {
+    background-color: #4DCCBD;
+    color: #070410;
+}
+
+/* Specific style for the first movie poster */
+.movie-box.first-movie {
+    margin-top: 30px; /* Adjust the value as needed for more or less space */
+    margin-bottom: 30px;
+}
+.movie-box.first-movie .movie-poster {
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.movie-box.first-movie .movie-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    color: #070410;
+    background-color: #FFFFFF;
+}
+
+.movie-box.first-movie .movie-info {
+    width: 70%;
+    font-size: 20px;
+}
+
+.movie-box.first-movie .watch-now-btn {
+    width: 200px;
+    height: 150px;
+    font-size: 2.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #4DCCBD;
+    background-color: #070410;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0;
+}
+
+/* Hover Effect */
+.movie-box.first-movie .watch-now-btn:hover { 
+    background-color: #4DCCBD;
+    color: #070410;
+}
+
+/* Movie Row (Two Posters Side by Side) */
+.movie-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px; /* Sets max-width for row to control layout */
+    margin: 0 auto;
+    gap: 16px; /* Adds a gap between the posters */
+    margin-bottom: 30px;
+}
+
+.movie-box.half-width {
+    flex-basis: 48%; /* Ensures boxes take up 48% of the row, leaving room for gap */
+    margin: 0;
+}
+/* Increase font size for movies 2 and 3 */
+.movie-box.half-width .movie-details p {
+    font-size: 1.2em; /* Increase as needed (default was 1em) */
+}
+
+.movie-row .watch-now-btn {
+    width: 100%;
+    font-size: 1.5em;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* Reduce the height for Movies 4, 5, and 6 */
+.movie-box.horizontal-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background-color: #FFFFFF;
+    margin: 16px auto;
+    height: 350px; /* Set a fixed height for the box */
+    overflow: hidden; /* Prevent content from overflowing */
+    margin-bottom: 30px; 
+}
+
+/* Adjust the height of the poster */
+.movie-box.horizontal-layout .movie-poster {
+    width: 50%;
+    max-width: 400px;
+    height: 100%; /* Make the poster fill the reduced height */
+    object-fit: cover;
+}
+
+/* Adjust the movie details section */
+.movie-box.horizontal-layout .movie-details {
+    width: 50%;
+    font-size: 1.3em;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 4px;
+    top: -50px; /* Reset the upward position adjustment */
+    position: relative;
+}
+
+/* Adjust the watch now button positioning */
+.movie-box.horizontal-layout .watch-now-btn {
+    align-self: flex-start;
+    width: 108%;
+    height: 70px; /* Adjust button height */
+    font-size: 1.5em;
+    margin-top: 8px;
+    border-radius: 8px;
+    position: relative;
+    margin-left: -14px;
+    top: 100px; /* Reset the upward position adjustment */
+}
+
+
+.movie-box.horizontal-layout .movie-details p {
+    margin: 0;
+    padding: 0; /* Removes any default padding or margins */
+    text-align: left; /* Aligns each <p> element to the left */
+    top: 50px;
+}
+.movie-box {
+    box-shadow: 10px 10px 4px rgba(0, 0,0,0.6)
+}
+
+
+
+  
+@media only screen and (max-width: 719px) {
+    /* Hide the navigation links */
+    nav {
+        display: none;
+    }
+
+    /* Align logo and search button side by side */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* Style the search button */
+    .search-btn {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Lato', sans-serif;
+        margin-right: 50px;
+        font-family: 'Teko', sans-serif;
+        font-size: 1.5em; /* Adjust size as needed */
+        background-color: #070410;
+        color: #FFFFFF;
+        
+
+    }
+   
+
+    .search-btn:hover {
+        background-color: #d0d0d0;
+    }
+
+    /* Full-width for movie boxes on smaller screens */
+    .movie-box.full-width,
+    .movie-box.half-width {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .movie-row {
+        flex-direction: column;
+    }
+
+    /* Responsive for horizontal layout */
+    .movie-box.horizontal-layout {
+        flex-direction: column;
+    }
+
+    .movie-box.horizontal-layout .movie-poster,
+    .movie-box.horizontal-layout .movie-details {
+        width: 100%;
+    }
+
+    .movie-box.horizontal-layout .watch-now-btn {
+        width: 100%;
+    }
+
+    /* Adjust layout for first movie poster */
+    .movie-box.first-movie {
+        margin-top: 20px; /* Adjust this value as needed */
+        margin-bottom: 20px;
+    }
+    .movie-box.first-movie .movie-poster {
+        max-height: 400px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .movie-box.first-movie .movie-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px;
+        background-color: #FFF;
+    }
+
+    .movie-box.first-movie .movie-info {
+        width: 100%;
+        font-size: 1.2em; /* Adjust text size for smaller screens */
+        margin-bottom: 16px; /* Add space between text and button */
+    }
+
+    /* Adjust the 'WATCH NOW' button for first movie */
+    .movie-box.first-movie .watch-now-btn {
+        width: 100%;
+        font-size: 1.5em;
+        padding: 12px;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 16px; /* Adds spacing between the text and button */
+    }
+
+    /* Ensure the font size and button adjust for other movie boxes */
+    .movie-box.half-width .movie-details p {
+        font-size: 1.2em; /* Slightly larger text for readability */
+    }
+    /* Full-width for movie boxes (movies 4, 5, 6) */
+    .movie-box.horizontal-layout {
+        width: 100%;  /* Full width */
+        margin: 8px 0;  /* Margin between movies */
+        flex-direction: column; /* Stack poster and details vertically */
+        height: auto;  /* Allow box to adjust height based on content */
+        margin-bottom: 24px;
+    }
+
+    /* Adjust the movie poster for full width */
+    .movie-box.horizontal-layout .movie-poster {
+        width: 200%;  /* Full width */
+        height: auto;  /* Maintain aspect ratio */
+        object-fit: cover;  /* Ensure the poster fills the space without distortion */
+        margin: 0;  /* Remove margin so it touches the box's border */
+        max-width: 100%;
+        max-height: 600px;
+    }
+
+    .movie-box.horizontal-layout .movie-details {
+        width: 100%;  /* Full width for the details */
+        font-size: 1.2em;  /* Slightly larger font size for readability */
+        padding: 16px;  /* Padding around text */
+        padding-left: 20px;  /* Space on the left */
+        padding-right: 20px;  /* Space on the right */
+        display: flex;
+        flex-direction: column;  /* Stack elements vertically */
+        align-items: flex-start;  /* Align text to the left */
+        box-sizing: border-box;  /* Include padding in width calculation */
+    }
+
+
+
+    /* Adjust the 'WATCH NOW' button */
+    .movie-box.horizontal-layout .watch-now-btn {
+        width: 100%;  /* Reduced width (adjust as needed) */
+        font-size: 1.5em;  /* Larger font size for button */
+        padding: 12px;  /* Add padding to button */
+        margin-top: 8px;  /* Add some space above the button */
+        margin: 0 auto;  /* Center the button horizontally */
+        border-radius: 8px;  /* Rounded corners */
+        position: relative;  /* Enable positioning */
+        top: 50px;  /* Move the button up by 12px */
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+    /* Main layout adjustments for tablet */
+    body {
+       margin-bottom: 50px;
+    }
+    main {
+     margin-left: 60px;  /* Adjust this value as needed */
+    margin-right: 60px; /* Adjust this value as needed */
+    }
+
+    .movie-box {
+        width: 48%;  /* Adjust the percentage to control the number of columns */
+        height: 670px; 
+        margin-bottom: 20px;  /* Optional, for spacing between rows */
+        box-sizing: border-box; /* Includes padding/border in the box size */
+        
+    }
+
+    /* Style for movie poster */
+    .movie-poster {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Style for movie details */
+    .movie-details {
+        padding: 16px;
+        background-color: #FFF;
+        text-align: center;
+        font-size: 1em; /* Adjust font size for readability */
+    }
+
+    /* Style for 'WATCH NOW' button */
+   
+    nav {
+        gap: 30px; /* Adjust this value to increase or decrease space between links */
+        margin-left:40px
+    }
+ /* Adjust layout for first movie poster */
+ .movie-box.first-movie {
+    margin-top: 20px; /* Adjust this value as needed */
+    margin-bottom: 20px;
+    width: 300px;
+    margin-left: -12px;
+}
+.movie-box.first-movie .movie-poster {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.movie-box.first-movie .movie-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #FFF;
+    text-align: left;
+}
+
+.movie-box.first-movie .movie-info {
+    width: 100%;
+    font-size: 1.2em; /* Adjust text size for smaller screens */
+    margin-bottom: 16px; /* Add space between text and button */
+}
+
+/* Adjust the 'WATCH NOW' button for first movie */
+.movie-box.first-movie .watch-now-btn {
+    width: 100%;
+    font-size: 2.8em;
+    padding: 12px;
+    height: 80px;
+    border-radius: 8px;
+    margin-top: -1px; /* Adds spacing between the text and button */
+}
+
+.movie-box.horizontal-layout {
+    width: 290px;  /* Full width */
+    margin: 8px 0;  /* Margin between movies */
+    flex-direction: column; /* Stack poster and details vertically */
+    height: auto;  /* Allow box to adjust height based on content */
+    margin-bottom: 24px;
+}
+
+/* Adjust the movie poster for full width */
+.movie-box.horizontal-layout .movie-poster {
+    width: 200%;  /* Full width */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;  /* Ensure the poster fills the space without distortion */
+    margin: 0;  /* Remove margin so it touches the box's border */
+    max-width: 100%;
+    max-height: 600px;
+}
+
+.movie-box.horizontal-layout .movie-details {
+    width: 100%;  /* Full width for the details */
+    font-size: 1.2em;  /* Slightly larger font size for readability */
+    padding: 16px;  /* Padding around text */
+    padding-left: 20px;  /* Space on the left */
+    padding-right: 20px;  /* Space on the right */
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+    align-items: flex-start;  /* Align text to the left */
+    box-sizing: border-box;  /* Include padding in width calculation */
+}
+
+
+
+/* Adjust the 'WATCH NOW' button */
+.movie-box.horizontal-layout .watch-now-btn {
+    width: 100%;  /* Reduced width (adjust as needed) */
+    font-size: 1.5em;  /* Larger font size for button */
+    padding: 12px;  /* Add padding to button */
+    margin-top: 8px;  /* Add some space above the button */
+    margin: 0 auto;  /* Center the button horizontally */
+    border-radius: 8px;  /* Rounded corners */
+    position: relative;  /* Enable positioning */
+    top: 50px;  /* Move the button up by 12px */
+}
+
+
+.movie-box.half-width:nth-child(2) {
+    
+    margin-top: -0px;  /* Increase negative margin to move the box up */
+    padding-top: 0;  /* Optional: adjust padding if necessary */
+    transform: translateY(0px); /* Shift it upwards for more control */
+    
+}
+/* lala */
+.movie-box:nth-child(3) {
+    margin-left: -7px;  /* Adjust this value as needed */
+    margin-top: 20px;
+}
+/* palm spring */
+.movie-box:nth-child(4) {
+    margin-left: 310px;  /* Adjust this value as needed */
+    margin-top: -674px;
+    height: 650px;
+}
+/* roger rabbit */
+.movie-box:nth-child(5) {
+    margin-left: 308px;  /* Adjust this value as needed */
+    margin-top: -2086px;
+    height: 670px;
+}
+.movie-box:nth-child(5) .movie-poster {
+    min-height: 345px;
+    
+}
+.movie-box:nth-child(5) .watch-now-btn {
+    margin-top: -45px; /* Adjust value as needed */
+    height: 82px;
+    font-size:2.3em
+    
+    
+}
+.movie-row {
+    margin-top: 40px;  /* Adjust this value to bring the row down */
+    margin-left: -10px; /* Adjust value as needed */
+}
+.movie-box.half-width .movie-details p {
+    text-align: left;
+    margin-top:-10px
+}
+.movie-row .watch-now-btn{
+    height: 79px;
+    font-size:2.8em;
+    margin-top:-1px;
+}
+.movie-box:nth-child(3) .movie-poster {
+    min-height: 345px;
+    
+}
+.movie-box:nth-child(3) .watch-now-btn {
+    margin-top: -30px; /* Adjust value as needed */
+    height: 92px;
+    font-size:2.4em
+    
+}
+.movie-box:nth-child(4) .movie-poster {
+    min-height: 345px;
+    
+}
+.movie-box:nth-child(4) .watch-now-btn {
+    margin-top: -10px; /* Adjust value as needed */
+    height: 92px;
+    font-size:2.3em
+}
+
+}
