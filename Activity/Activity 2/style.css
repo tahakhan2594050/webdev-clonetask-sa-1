@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('OIP (14) (1).jpeg'); /* Adjust the path if needed */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space the content and footer */
+}
+
+.logo-container {
+    position: absolute;
+    top: -30px; /* Distance from the top */
+    left: 0px; /* Distance from the left */
+    z-index: 10; /* Ensure the logo is above other elements */
+}
+
+.logo {
+    width: 250px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    position: absolute;
+    top: 20px; /* Space below the logo */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between the links */
+}
+
+nav ul li {
+    display: inline;
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+nav ul li:not(:last-child)::after { /* Add vertical line after each li except the last */
+    content: '';
+    position: absolute;
+    right: -10px; /* Adjust spacing from text */
+    top: 50%; /* Center the line vertically */
+    transform: translateY(-50%); /* Center the line */
+    width: 1px; /* Width of the line */
+    height: 20px; /* Height of the line */
+    background-color: white; /* Color of the line */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 100px; /* Add space for the navigation bar */
+}
+
+/* Footer Section */
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Space between content and dots/logo */
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+}
+
+footer p {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    font-size: 2em; /* Big size for the first paragraph */
+}
+
+.small-text {
+    font-size: 1em; /* Smaller size for the second paragraph */
+}
+
+/* Dot Container */
+.dot-container {
+    display: flex;
+    align-items: center; /* Center dots and logo vertically */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: grey; /* Dot color */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 5px; /* Space between dots */
+}
+
+.send-logo {
+    width: 60px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Space between dots and logo */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.job-link {
+    color: #ffcc00; /* Change link color */
+    text-decoration: underline; /* Underline the link */
+}
+
+.job-link:hover {
+    color: white; /* Change color on hover */
+}
