@@ -1,0 +1,190 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Padding to avoid content being hidden under the navbar */
+}
+
+/* Transparent Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark grey with 70% opacity */
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays above other elements */
+}
+
+h1 {
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light transparent hover effect */
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 10px; /* Space below the card title */
+}
+
+p {
+    color: white;
+}
+
+/* Card Design */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 100px auto 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-title {
+    margin: 10px 0;
+}
+
+.card-button {
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Image Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows the images to wrap into the next row */
+    justify-content: center; /* Centers the images horizontally */
+    margin: 20px;
+}
+
+/* Add margin to separate gallery from the card */
+.gallery {
+    margin-top: 200px; /* Space above the gallery */
+}
+
+.gallery-item {
+    width: 30%; /* Each image will take up 30% of the container width */
+    height: 30%; /* Set height to equal width for square images */
+    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+    object-fit: cover; /* Ensures the images cover the area without distorting the aspect ratio */
+    border-radius: 10px;
+    margin: 5px; /* Add some space between the images */
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 45%; /* For smaller screens, make the images wider */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* On very small screens, make images full width */
+    }
+}
+
+/* Quiz Layout */
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    background-color: rgba(0, 0, 0, 0.1); /* Slightly transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-question {
+    color: white;
+    margin-bottom: 20px; /* Space below the question */
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.option {
+    padding: 15px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.option:hover {
+    background-color: #e1e1e1; /* Darker on hover */
+}
+
+.submit-button {
+    padding: 10px 15px;
+    background-color: #ffffff; /* Bootstrap primary color */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+}
+
+.result {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* To-Do List Application */
+.todo-container {
+    width: 300px;
+    margin: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.task-label {
+    color: white; /* Change task label color to white */
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
