@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Grid Layouts</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 1. Advanced Two-Column Layout with Sidebar -->
+    <section class="grid-layout">
+        <div class="sidebar">Sidebar Navigation</div>
+        <div class="main-content">
+            <h1>Café Flamenco</h1>
+            <p>Explore our content and discover great features!</p>
+        </div>
+    </section>
+
+    <!-- 2. Enhanced Responsive Photo Grid -->
+    <section class="photo-grid">
+        <img src="p.gif" alt="Photo 1">
+        <img src="n.gif" alt="Photo 2">
+        <img src="y.gif" alt="Photo 3">
+        <img src="w.gif" alt="Photo 4">
+        <img src="c.gif" alt="Photo 5">
+        <img src="h.gif" alt="Photo 6">
+    </section>
+
+    <!-- 3. Dashboard Interface -->
+    <section class="dashboard">
+        <div class="header">Dashboard Overview</div>
+        <div class="sidebar">Menu</div>
+        <div class="main-content">
+            <div class="widget">📊 Statistics</div>
+            <div class="widget">📝 Recent Activity</div>
+            <div class="widget">🔔 Notifications</div>
+        </div>
+    </section>
+
+    <!-- 4. Product Page Layout -->
+    <section class="product-page">
+        <img src="s.gif" alt="Product Image" class="product-image">
+        <div class="product-info">
+            <h1>Cheese Cake</h1>
+            <p>Amazing product that solves all your problems.</p>
+            <span class="price">27.99 AED</span>
+            <button class="buy-now">Buy Now</button>
+        </div>
+    </section>
+
+    <!-- 5. CSS Grid Quiz Layout -->
+    <section class="quiz">
+        <div class="question">What is the capital of France?</div>
+        <div class="answers">
+            <button class="answer" data-answer="A">A. Berlin</button>
+            <button class="answer" data-answer="B">B. Madrid</button>
+            <button class="answer" data-answer="C" id="correct">C. Paris</button>
+            <button class="answer" data-answer="D">D. Rome</button>
+        </div>
+        <div class="feedback"></div>
+    </section>
+
+    <section class="quiz">
+        <div class="question">What is the largest planet in our Solar System?</div>
+        <div class="answers">
+            <button class="answer" data-answer="A">A. Earth</button>
+            <button class="answer" data-answer="B">B. Jupiter</button>
+            <button class="answer" data-answer="C">C. Saturn</button>
+            <button class="answer" data-answer="D">D. Mars</button>
+        </div>
+        <div class="feedback"></div>
+    </section>
+
+    <section class="quiz">
+        <div class="question">Which element has the chemical symbol 'O'?</div>
+        <div class="answers">
+            <button class="answer" data-answer="A">A. Gold</button>
+            <button class="answer" data-answer="B">B. Oxygen</button>
+            <button class="answer" data-answer="C">C. Hydrogen</button>
+            <button class="answer" data-answer="D">D. Carbon</button>
+        </div>
+        <div class="feedback"></div>
+    </section>
+
+    <section class="quiz">
+        <div class="question">What is the smallest prime number?</div>
+        <div class="answers">
+            <button class="answer" data-answer="A">A. 0</button>
+            <button class="answer" data-answer="B">B. 1</button>
+            <button class="answer" data-answer="C">C. 2</button>
+            <button class="answer" data-answer="D">D. 3</button>
+        </div>
+        <div class="feedback"></div>
+    </section>
+
+    <section class="quiz">
+        <div class="question">What is the currency of Japan?</div>
+        <div class="answers">
+            <button class="answer" data-answer="A">A. Yen</button>
+            <button class="answer" data-answer="B">B. Won</button>
+            <button class="answer" data-answer="C">C. Dollar</button>
+            <button class="answer" data-answer="D">D. Peso</button>
+        </div>
+        <div class="feedback"></div>
+    </section>
+
+    <div class="result" style="display: none;">You completed the quiz!</div>
+    <div class="progress"></div>
+
+    <!-- Link to JavaScript file -->
+    <script src="./script.js"></script>
+</body>
+</html>
