@@ -1,0 +1,745 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #e9e9e9;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+}
+
+/* Header */
+header {
+    background-color: #e9e9e9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    gap: 380px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 350px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 7em !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    top: -100px; /* Use top with a negative value to move it up */
+}
+
+.hero h2 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 3em;
+    font-weight: normal; /* Ensure h2 is not bold */
+    position: relative;
+    top: -130px; /* Adjust this to move h2 up */
+}
+
+.intro {
+    font-size: 50px;
+    margin-bottom: 20px;
+    max-width: 67%;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+    position: relative;
+    top: -120px; /* Move intro up */
+}
+
+/* Content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 0px;
+    position: relative;
+    top: -130px; /* Move content up */
+}
+
+.content-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content h3 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.content p {
+    margin-bottom: 15px;
+    color: black;
+    font-size: 20px;
+}
+
+/* Image Wrapper Section */
+.image-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -250px;
+    gap: 20px;
+    position: relative;
+    top: -180px; /* Move gallery section up */
+}
+
+/* Large Image Section */
+.image-gallery img {
+    width: 650px;
+    height: 650px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: -50px;
+    margin-right: 20px;
+    top: 300px;
+}
+
+/* Small Image Gallery Section */
+.small-image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.small-image-gallery img {
+    width: 325px;
+    height: 325px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.small-image-gallery img:nth-child(1) {
+    top: 300px;
+    left: -275px;
+}
+
+.small-image-gallery img:nth-child(2) {
+    top: -30px;
+    left: 50px;
+}
+
+.small-image-gallery img:nth-child(3) {
+    top: -35px;
+    left: -275px;
+}
+
+.small-image-gallery img:nth-child(4) {
+    top: -365px;
+    left: 50px;
+}
+
+/* Author Section */
+.author {
+    margin-top: -250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+    top: -240px; /* Move author section up */
+    
+}
+
+.author-info {
+    max-width: 600px;
+    text-align: center;
+}
+
+.author-heading {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.author-photo {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.author p {
+    color: black;
+    font-size: 1.3em;
+    line-height: 1.5;
+    margin-top: 0;
+    
+}
+
+/* Footer */
+footer {
+    background-color: #14181d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto; /* Center footer */
+    position: relative;
+    top: -16px; /* Move footer up */
+    margin-top: -70px; /* Adjust this value as needed */
+
+    
+}
+
+
+/* Ensure body and html take full height */
+html, body {
+    height: 100%;
+}
+
+
+/* Hide the large image on screens smaller than 768px (tablets and mobile devices) */
+@media screen and (max-width: 1023px) {
+    .image-gallery img {
+        display: none;
+    }
+}
+/*small mobile*/
+
+@media (min-width: 360px) and (max-width: 540px) {
+     /* Adjust header */
+     body, html {
+        overflow-x: hidden;
+    }
+     header img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 42px; /* Closer spacing for navigation */
+        font-size: 13px
+    }
+
+    /* Main content adjustments */
+    main {
+        padding: 10px;
+    }
+  
+
+    .hero h1 {
+        font-size: 3em !important;
+        text-align: center;
+        font-weight: normal;
+        top: -50px;
+    }
+
+    .hero h2 {
+        font-size: 2.9em !important;
+        text-align: center;
+        font-weight: normal;
+        top: -80px;
+        margin: 30px;
+    }
+    
+    
+    
+
+    .intro {
+        font-size: 1.1em;
+        line-height: 1.4;
+        text-align: center;
+        margin: 20px 0;
+        max-width: 95%;
+        text-align: left;
+        top: -100px;
+    }
+
+    /* Stack content vertically */
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .content-item h3 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .content-item p {
+        font-size: 1.1em;
+        line-height: 1.4;
+    }
+
+    /* Adjust the image-wrapper for mobile devices */
+    .image-wrapper {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+        gap: 10px; /* Space between images */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Full width of the container */
+        height: auto; 
+        margin-bottom: 10px; /* Space between large image and small images */
+    }
+
+    /* Stack small images in a column */
+    .small-image-gallery {
+        display: flex;
+        flex-direction: column; /* Display in a vertical stack */
+        gap: 10px; 
+        align-items: center; /* Center-align the small images */
+        position: relative;
+    }
+
+    .small-image-gallery img {
+        width: 110%; 
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Move the first small image to the right */
+    .small-image-gallery img:nth-child(1) {
+        position: relative;
+        left: 2px; /* Move the first image 50px to the right */
+    }
+
+    /* Move the second small image down */
+    .small-image-gallery img:nth-child(2) {
+        position: relative;
+        top: 290px; /* Move the second image 50px down */
+        left: 2px;
+    }
+
+    .small-image-gallery img:nth-child(3) {
+        position: relative;
+        top: 280px; /* Move the third image 50px down */
+        left: 2px;
+    }
+
+    .small-image-gallery img:nth-child(4) {
+        position: relative;
+        top: 270px; /* Move the fourth image 50px down */
+        left: 2px;
+    }
+
+    /* Author section - reverse layout */
+    .author {
+        flex-direction: column-reverse; /* Moves the image up and the text down */
+        text-align: center;
+        margin: 60px 0; /* Increased margin to adjust overall position */
+        top: 80px;
+    }
+
+    /* Move photo up, heading and text down */
+    .author-photo {
+        margin-bottom: 2px; /* Moves the photo up by adding space between the image and text */
+        width: 200px;
+        top: 40px;
+    }
+    footer {
+        margin-top: 20px;
+        margin-bottom: -60px; /* Remove any space after the footer */
+    }
+        
+    
+}
+
+  
+/* Large Mobile Screens (540px to 720px) */
+@media (min-width: 540px) and (max-width: 720px) {
+    /* Adjust header */
+    body, html {
+        overflow-x: hidden;
+    }
+    header img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 120px; /* Closer spacing for navigation */
+    }
+
+    /* Main content adjustments */
+    main {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 5em !important;
+        text-align: center;
+        font-weight: normal;
+        top: -80px;
+    }
+
+    .hero h2 {
+        font-size: 3.6em !important;
+        text-align: center;
+        font-weight: normal;
+        top: -110px;
+        margin: 20px;
+    }
+
+    .intro {
+        font-size: 1.2em;
+        line-height: 1.4;
+        text-align: center;
+        margin: 20px 0;
+        max-width: 95%;
+        text-align: left;
+    }
+
+    /* Stack content vertically */
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .content-item h3 {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .content-item p {
+        font-size: 1.2em;
+        line-height: 1.4;
+    }
+
+    /* Adjust the image-wrapper for mobile devices */
+    .image-wrapper {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+        gap: 10px; /* Space between images */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Full width of the container */
+        height: auto; 
+        margin-bottom: 10px; /* Space between large image and small images */
+    }
+
+    /* Stack small images in a column */
+    .small-image-gallery {
+        display: flex;
+        flex-direction: column; /* Display in a vertical stack */
+        gap: 10px;
+        align-items: center; /* Center-align the small images */
+        position: relative;
+    }
+
+    .small-image-gallery img {
+        width: 110%; /* Make the small images fill the width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Move the first small image to the right */
+    .small-image-gallery img:nth-child(1) {
+        position: relative;
+        left: 2px; /* Move the first image 50px to the right */
+    }
+
+    /* Move the second small image down */
+    .small-image-gallery img:nth-child(2) {
+        position: relative;
+        top: 285px; /* Move the second image 50px down */
+        left: 2px;
+    }
+
+    .small-image-gallery img:nth-child(3) {
+        position: relative;
+        top: 275px; /* Move the third image 50px down */
+        left: 2px;
+    }
+
+    .small-image-gallery img:nth-child(4) {
+        position: relative;
+        top: 265px; /* Move the fourth image 50px down */
+        left: 2px;
+    }
+
+    /* Author section - reverse layout */
+    .author {
+        flex-direction: column-reverse; /* Moves the image up and the text down */
+        text-align: center;
+        margin: 60px 0; /* Increased margin to adjust overall position */
+        top: 80px;
+    }
+
+    /* Move photo up, heading and text down */
+    .author-photo {
+        margin-bottom: 2px; /* Moves the photo up by adding space between the image and text */
+        width: 200px;
+        top: 40px;
+    }
+
+    footer {
+        margin-top: 20px;
+        margin-bottom: -60px; /* Remove any space after the footer */
+    }
+}
+/* Tablet (720px to 1024px) */
+@media  (min-width: 720px) and (max-width: 1023px) {
+   /* Adjust header */
+   body {
+    background-color: #e9e9e9; /* Grey background for tablet screens only */
+    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+   }
+header img {
+    width: 200px;
+    margin-bottom: 50px;
+    background-color: #e9e9e9;
+}
+
+nav ul {
+    flex-direction: row;
+    font-size:1.5em !important; 
+    gap: 90px;
+}
+
+/* Main content adjustments */
+main {
+    width: 750px; /* Fixed width for main */
+    background-color: white; /* White background for main content */
+    padding: 20px; 
+    margin: 20px auto; /* Auto left/right margins to center */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.hero h1 {
+    font-size: 4.5em !important;
+    text-align: center;
+    font-weight: normal;
+    top: -70px;
+    margin-right: 150px
+}
+
+.hero h2 {
+    font-size: 4.1em !important;
+    text-align: center;
+    top: -100px;
+    font-weight: normal;
+    padding: -20px;
+     margin-right: 180px
+    
+}
+
+.intro {
+    font-size: 1.8em;
+    line-height: 1.4;
+    text-align: center;
+    margin: 20px 0;
+    max-width: 95%;
+    text-align: left;
+    margin-right:180px;
+}
+
+/* Stack content vertically */
+.content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.content-item h3 {
+    text-align: center;
+    font-size: 2.9em;
+    margin-right:180px;
+}
+
+.content-item p {
+    font-size: 1.8em;
+    line-height: 1.4;
+    margin-right:180px;
+}
+
+/* Adjust the image-wrapper for mobile devices */
+.image-wrapper {
+    flex-direction: column; /* Stack images vertically */
+    align-items: center;
+    gap: 10px; /* Space between images */
+}
+
+.image-gallery img {
+    width: 100%; /* Full width of the container */
+    height: auto; 
+    margin-bottom: 10px; /* Space between large image and small images */
+}
+
+/* Stack small images in a column */
+.small-image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px; /* Adjust for desired spacing */
+    width: 100%; /* Optional: Set width to control layout */
+  }
+
+  .small-image-gallery img {
+    width: 310px;
+    height: 310px;
+    object-fit: cover; /* Ensures images fit neatly in each grid cell */
+  }
+
+
+/* Move the first small image to the right */
+.small-image-gallery img:nth-child(1) {
+    position: relative;
+    left: -20px; /* Move the first image 50px to the right */
+}
+
+/* Move the second small image down */
+.small-image-gallery img:nth-child(2) {
+    position: relative;
+    top: 300px; /* Move the second image 50px down */
+    left: -90px;
+}
+
+.small-image-gallery img:nth-child(3) {
+    position: relative;
+    top: 290px; /* Move the third image 50px down */
+    left: -20px;
+}
+
+.small-image-gallery img:nth-child(4) {
+    position: relative;
+    top: 290px; /* Move the fourth image 50px down */
+    left: -90px;
+}
+
+/* Author section layout with photo on the right */
+.author {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    align-items: center;
+    justify-content: center;
+    gap: 0px; /* Space between photo and text */
+    text-align: left; 
+    margin: 60px 0; /* Vertical spacing */
+    top: 55px;
+    
+}
+
+/* Author heading and text on the left */
+.author-heading {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+    margin-right: 0px
+}
+
+.author-info {
+    max-width: 600px;
+    margin-right: 10px
+    
+}
+
+.author p {
+    color: black;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 0;
+    
+    
+}
+
+/* Author photo on the right */
+.author-photo {
+    width: 200px; /* Adjust photo size */
+    margin-right: 170px; /* Add space between text and image */
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #14181d; /* Dark background for the footer */
+    color: #ffffff;
+    text-align: center; /* Center align text */
+    padding: 20px; 
+    width: 600px; 
+    max-width: 1200px; /* Ensure footer does not exceed main content max width */
+    margin: 0px auto 0; 
+    border: 2px solid #000000; 
+    border-radius: 0; /
+      
+}
+}
+
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px)  {
+    header img {
+        width: 200px;
+    }
+
+    main {
+        padding: 50px;
+        height: 2400px;
+    }
+
+    .hero h1 {
+        font-size: 4em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .intro {
+        font-size: 1.5em;
+    }
+
+    .content {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+
+    /* Maintain image sizes, remove resizing */
+    .image-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
